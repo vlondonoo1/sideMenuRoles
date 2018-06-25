@@ -17,7 +17,7 @@ export class AuthProvider {
 	private isLoggedIni = false;
 	currentUser: User;
   constructor() {
-    console.log('Hello AuthProvider Provider');
+    console.log('Hello AuthProvider');
   }
   login(name: string, pwd: string) : Promise<boolean> {
     return new Promise((resolve, reject) => {
@@ -40,7 +40,7 @@ export class AuthProvider {
   }
 
   isLoggedIn() {
-    this.isLoggedIni = true;
+    // this.isLoggedIni = true;
     return this.currentUser != null;
 
   }

@@ -7,11 +7,10 @@
 </ion-header>
  
 <ion-content padding>
-<h2 *ngIf="isAuthenticated()" text-center>User is logged in!</h2>
-<h2 *ngIf="!isAuthenticated()" text-center>User is not logged in!</h2>
+
  
 <button full ion-button color="primary" (click)="login()">Login</button>
 
-<button full ion-button color="secondary" (click)="anonymous()">General</button>
+<button full ion-button color="secondary" (click)="anonymous()" >General</button>
  
 </ion-content>

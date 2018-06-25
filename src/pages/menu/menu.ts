@@ -2,12 +2,7 @@ import { AuthProvider } from './../../providers/auth/auth';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Nav, App } from 'ionic-angular';
 
-/**
- * Generated class for the MenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -27,13 +22,13 @@ export class MenuPage {
     if (this.authProvider.isAdmin()) {
       this.pages = [
         { title: 'Admin Dashboard', page: 'AdminPage', icon: 'home' },
-        { title: 'Admin Second Page', page: 'AdminSecondPage', icon: 'planet' }
+        { title: 'Admin Second Page', page: 'AdminSecondPage', icon: 'book' }
       ];
       this.openPage('AdminPage');
     } else {
       this.pages = [
         { title: 'User Dashboard', page: 'UserPage', icon: 'home' },
-        { title: 'User Second Page', page: 'UserSecondPage', icon: 'planet' }
+        { title: 'User Second Page', page: 'UserSecondPage', icon: 'cafe' }
       ];
       this.openPage('UserPage');
     }
