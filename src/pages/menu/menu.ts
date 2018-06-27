@@ -37,7 +37,8 @@ export class MenuPage {
  
   logout() {
     this.authProvider.logout();
-    this.appCtrl.getRootNav().setRoot('LoginPage');
+    // this.appCtrl.getRootNav().setRoot('LoginPage');
+    this.nav.setRoot('LoginPage');
   }
  
   openPage(page) {

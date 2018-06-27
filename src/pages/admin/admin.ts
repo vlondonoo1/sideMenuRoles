@@ -19,5 +19,20 @@ export class AdminPage {
     // return this.authProvider.authenticated();
     return this.authProvider.isLoggedIn();
   }
+  // isAuthenticated(){
+  //   return this.authProvider.isAdmin();
+  // }
+  validate(comp):boolean{
+  let permisions = {orden:
+        { user: true , admin: false },
+        deliver:{ user: false, admin: true}
+    }
 
+    if(this.authProvider.isAdmin()){
+      permisions[comp].admin
+      console.log('esta es',permisions[comp].admin)
+      return true
+    }
+    
+  }
 }
