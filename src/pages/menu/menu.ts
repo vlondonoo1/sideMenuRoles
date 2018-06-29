@@ -19,18 +19,19 @@ export class MenuPage {
   }
 
   ionViewWillEnter() {
+    this.openPage('LoggedPage');
     if (this.authProvider.isAdmin()) {
       this.pages = [
         { title: 'Admin Dashboard', page: 'AdminPage', icon: 'home' },
         { title: 'Admin Second Page', page: 'AdminSecondPage', icon: 'book' }
       ];
-      this.openPage('AdminPage');
+      //this.openPage('LoggedPage');
     } else {
       this.pages = [
         { title: 'User Dashboard', page: 'UserPage', icon: 'home' },
         { title: 'User Second Page', page: 'UserSecondPage', icon: 'cafe' }
       ];
-      this.openPage('UserPage');
+      //this.openPage('LoggedPage');
     }
     this.username = this.authProvider.currentUser.name;
   }

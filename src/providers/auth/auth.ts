@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-
+// this provider aauthenticated mode
 
 export interface User {
   name: string;
@@ -36,7 +36,14 @@ export class AuthProvider {
 
   isLoggedIn() {
     // this.isLoggedIni = true;
+    console.log(this.currentUser.role)
     return this.currentUser != null;
+
+  }
+
+  kindofmode() {    
+    console.log(this.currentUser.role)
+    return this.currentUser.role;
 
   }
 

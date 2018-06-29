@@ -1,0 +1,10 @@
+{
+  "appear": {
+    "ordebuton": { "permittedRoles": ["admin"] } },
+    "loadbuton": {"permittedRoles": ["admin", "user"]}
+    ,
+    "other":  { "permittedRoles": ["admin"]}
+    
+}
+
+
