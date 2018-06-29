@@ -41,7 +41,7 @@ export class AuthProvider {
 
   }
 
-  kindofmode() {    
+  kindofmode() {     //this is to asign modes
     console.log(this.currentUser.role)
     return this.currentUser.role;
 
