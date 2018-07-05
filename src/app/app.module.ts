@@ -8,11 +8,13 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 import { CommonproviderProvider } from '../providers/commonprovider/commonprovider';
+import { CanSeeDirective } from '../directives/can-see/can-see';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    CanSeeDirective
   ],
   imports: [
     BrowserModule,
