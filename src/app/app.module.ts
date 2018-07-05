@@ -8,16 +8,19 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AuthProvider } from '../providers/auth/auth';
 import { CommonproviderProvider } from '../providers/commonprovider/commonprovider';
-import { CanSeeDirective } from '../directives/can-see/can-see';
+import { DirectivesModule } from '../directives/directives.module';
+import { ComponentsModule } from '../components/components.module'
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    CanSeeDirective
+    HomePage
   ],
   imports: [
     BrowserModule,
+    DirectivesModule,
+    ComponentsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

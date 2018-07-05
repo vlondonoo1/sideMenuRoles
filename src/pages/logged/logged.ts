@@ -1,6 +1,8 @@
 import { Component,Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CommonproviderProvider } from './../../providers/commonprovider/commonprovider';
+import { ButtonsitoComponent } from './../../components/buttonsito/buttonsito';
+
 /**
  * Generated class for the LoggedPage page.
  *
@@ -24,12 +26,12 @@ export class LoggedPage {
 
 
   boton2(){
-  	this.commonProvider.checkActions()
+    this.commonProvider.checkActions()
 
   }
   avoid(componente){
     console.log("respuesta",this.commonProvider.avoidcomponents(componente))
     return this.commonProvider.avoidcomponents(componente)
-    
+
   }
 }
