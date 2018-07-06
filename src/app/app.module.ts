@@ -10,6 +10,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { CommonproviderProvider } from '../providers/commonprovider/commonprovider';
 import { DirectivesModule } from '../directives/directives.module';
 import { ComponentsModule } from '../components/components.module'
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ComponentsModule } from '../components/components.module'
     BrowserModule,
     DirectivesModule,
     ComponentsModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    SharedModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

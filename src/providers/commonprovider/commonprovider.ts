@@ -1,6 +1,7 @@
 // import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthProvider } from '../auth/auth';
+import {SharedModule} from '../../shared/shared.module';
 //import { HttpClient } from '@angular/common/http';
 
 /*
@@ -10,32 +11,21 @@ also should define componenents
 @Injectable()
 export class CommonproviderProvider {
 //public http: HttpClient
-  constructor(private authProvider: AuthProvider) {
+  constructor(private authProvider: AuthProvider, private share: SharedModule) {
     console.log('Hello CommonproviderProvider Provider');
   }
 
 
-  avoidcomponents(com){
-    let permission= {
-    "ordebuton": { "permittedRoles": ["admin"] } ,
-    "loadbuton": {"permittedRoles": ["user", "user"]},
-    "other":  { "permittedRoles": ["user"]}
-    }
-
-    let mode=this.checkActions()
-
-
+  avoidcomponents(com){   
     let fla = false
-    let permit= permission[com].permittedRoles;
+    let permit= this.share.check[com].permittedRoles;
        permit.forEach((word)=>{
-      if(word== mode){
+      if(word== this.checkActions()){
         fla=true
-        console.log(fla,"hereeeeee fla")
       }
 
-      })
+     })
     return fla
-
   }
 
   checkActions(){
