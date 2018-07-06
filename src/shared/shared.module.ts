@@ -10,10 +10,9 @@ import { IonicModule } from "ionic-angular";
 })
 export class SharedModule {
 	
-  constructor() {
-    
+  constructor() {    
   }
-  	check ={
+  	check = {
     "ordebuton": { "permittedRoles": ["admin"] } ,
     "loadbuton": {"permittedRoles": ["user", "user"]},
     "other":  { "permittedRoles": ["user"]}
