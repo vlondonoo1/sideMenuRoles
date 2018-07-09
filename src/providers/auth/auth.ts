@@ -29,7 +29,12 @@ export class AuthProvider {
         };
         resolve(true);
       } else {
+        this.currentUser = {
+          name: "general",
+          role: 200
+        };
         resolve(false);
+
       }
     });
   }
@@ -44,6 +49,11 @@ export class AuthProvider {
   kindofmode() {     //this is to asign modes
     console.log(this.currentUser.role)
     return this.currentUser.role;
+
+  }
+   kindofuser() {     //this is to asign modes
+    console.log(this.currentUser.name)
+    return this.currentUser.name;
 
   }
 

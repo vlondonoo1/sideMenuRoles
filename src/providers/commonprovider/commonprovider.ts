@@ -28,6 +28,20 @@ export class CommonproviderProvider {
     return fla
   }
 
+
+  permitcomp(com,user){
+      let fla = false
+      let permit= this.share.check[com].permittedRoles;
+       permit.forEach((word)=>{
+      if(word== user){
+        fla=true
+      }
+
+     })
+    return fla
+
+  }
+
   checkActions(){
     let mode = this.authProvider.kindofmode()
     let role
