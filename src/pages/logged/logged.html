@@ -19,11 +19,11 @@
 <ion-content  >
   <!-- <h1 can-see></h1> -->
 <h2  text-center > HELLO dear friend!</h2>
-  <h1  can-see>Hello World!</h1>
+  <h1  >Hello World!</h1>
   <button *ngIf="avoid('loadbuton')" ion-button round>Round Button</button>
   <button  ion-button round  (click)="boton2()" >Round Button2</button>
-  <button  can-see ion-button round>Round Button3</button>
-  <button can-see >click me</button>
+  <button   *can-see="'ordebuton'" ion-button round>Round Button3</button>
+  <button  *can-see="'other'" >click me</button>
   <buttonsito></buttonsito>
 </ion-content>
 
