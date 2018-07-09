@@ -9,11 +9,13 @@ export interface User {
 
 @Injectable()
 export class AuthProvider {
-	private isLoggedIni = false;
-	currentUser: User;
+  private isLoggedIni = false;
+  currentUser: User;
+
   constructor() {
     console.log('Hello AuthProvider');
   }
+
   login(name: string, pwd: string) : Promise<boolean> {
     return new Promise((resolve, reject) => {
       if (name === 'admin' && pwd === 'admin') {
@@ -55,7 +57,7 @@ export class AuthProvider {
     this.isLoggedIni = false;
   }
 
-   authenticated() : boolean {
+  authenticated() : boolean {
     return this.isLoggedIni;
   }
 

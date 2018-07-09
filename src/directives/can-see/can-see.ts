@@ -1,5 +1,6 @@
   import { Directive, Input,OnDestroy, HostBinding,OnInit, ElementRef, AfterViewInit, Renderer2, ViewContainerRef, TemplateRef } from '@angular/core';
   import { CommonproviderProvider } from './../../providers/commonprovider/commonprovider';
+  import { TYPE_OF_APP } from './../../providers/choose_provider';
   /**
    * Generated class for the CanSeeDirective directive.
    *
@@ -22,24 +23,25 @@
        // element.nativeElement.style.color = 'red'
     }
 
-    avoid(componente){
-      return this.commonProvider.avoidcomponents(componente)
+    avoid(roles){
+      return roles.includes(TYPE_OF_APP);
     }
 
     ngAfterViewInit(){
       console.log('verito feliz cumple',this.element.nativeElement)
     }
 
-      show(component_){
-        console.log(component_,"component____");
-        let val= !this.avoid(component_)
-         if(val) {
-          this.viewContainer.clear();
-        } else {
-          this.viewContainer.createEmbeddedView(this.templateRef);
+    show(roles){
+      console.log(roles,"roles___");
+      let val= !this.avoid(roles)
+       if(val) {
+        this.viewContainer.clear();
+      } else {
+        this.viewContainer.createEmbeddedView(this.templateRef);
 
-        }
       }
+    }
+
     ngOnInit(){
       // console.log("xxxxx",this.component);
       // console.log("result",!this.avoid(this.component));
